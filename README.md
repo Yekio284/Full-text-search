@@ -9,6 +9,6 @@ Unit tests: Google Test
 * cd build/release  
 * make  
 * cd bin  
-* ./test_searcher *(For run GTest. After that command __you should__ delete directory Full-text-search/src/indexer/index)*  
+* ./test_searcher *(For run GTest. After that command __you should__ delete directory __Full-text-search/src/indexer/index__)*  
 * ./app index --csv <path .csv file> --index <path to index directory> --config <path to config.xml> *(This command creates index)*  
 * ./app search --index <path to index directory> --config <path to config.xml> --query <your query> *(Search command)*
