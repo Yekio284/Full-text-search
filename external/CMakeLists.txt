@@ -1,0 +1,5 @@
+add_subdirectory(CLI11)
+add_subdirectory(googletest)
+add_subdirectory(pugixml)
+add_subdirectory(PicoSHA2)
+add_subdirectory(rapidcsv)
