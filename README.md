@@ -10,5 +10,5 @@ Unit tests: [Google Test](https://github.com/google/googletest)
 * make  
 * cd bin  
 * ./test_searcher *(For run GTest. After that command __you should__ delete directory __Full-text-search/src/indexer/index__)*  
-* ./app index --csv <path to .csv file> --index <path to index directory> --config <path to config.xml> *(This command creates index)*  
-* ./app search --index <path to index directory> --config <path to config.xml> --query <your query> *(Search command)*
+* ./app index --csv "path to .csv file" --index "path to index directory" --config "path to config.xml" *(This command creates index)*  
+* ./app search --index "path to index directory" --config "path to config.xml" --query "your query in __double quotes__" *(Search command)*
