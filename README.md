@@ -1,7 +1,7 @@
 # Full-text search system
 Full-text search system project on C++  
-Build automation: CMake  
-Unit tests: Google Test
+Build automation: [CMake](https://cmake.org/)  
+Unit tests: [Google Test](https://github.com/google/googletest)
 
 ## User Guide  
 #### After cloning repository, make next commands:  
