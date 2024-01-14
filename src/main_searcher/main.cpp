@@ -2,10 +2,10 @@
 #include <CLI/Formatter.hpp>
 #include <CLI/Config.hpp>
 #include <rapidcsv.h>
-#include <indexer.hpp>
-#include <searcher.hpp>
 #include <iostream>
 #include <vector>
+#include <indexer.hpp>
+#include <searcher.hpp>
 
 void index_command(const std::string &path_to_csv, const std::string &path, const char *xmldir) {
     rapidcsv::Document document(path_to_csv);
@@ -25,6 +25,10 @@ void index_command(const std::string &path_to_csv, const std::string &path, cons
 void search_command(const std::string &query, const char *xmldir, std::filesystem::path &index_dir) {
     TextIndexAccessor index_accessor(index_dir);
     std::vector<Result> result = search(query, xmldir, index_accessor);
+
+    std::sort(result.begin(), result.end(), [](const Result &a, const Result &b){
+        return a.score > b.score;
+    });
 
     for (auto res : result) {
         std::cout << res.document_id << ' ' << res.score << ' ' << index_accessor.load_document(res.document_id) << std::endl;
